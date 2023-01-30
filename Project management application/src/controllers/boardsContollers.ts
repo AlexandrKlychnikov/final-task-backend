@@ -39,7 +39,7 @@ export const createBoard = async (req: Request, res: Response) => {
   const { title, description, owner, users } = req.body;
   try {
     const newBoard = await boardService.createBoard(
-      { title, owner, users },
+      { title, description, owner, users },
       guid,
       initUser
     );
